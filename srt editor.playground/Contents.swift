@@ -20,3 +20,4 @@ let strechedTitles = titles.map { title -> String in
 }
 
 try strechedTitles.joined(separator: emptyLine).write(toFile: "/tmp/subtitles.srt", atomically: true, encoding: .utf8)
+
