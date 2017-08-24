@@ -1,5 +1,8 @@
 import Foundation
 
+public let linebreak = "\r\n"
+public let emptyLine = linebreak + linebreak
+
 let secondInMilliseconds = UInt(1000)
 let minuteInMilliseconds = 60 * secondInMilliseconds
 let hourInMilliseconds = 60 * minuteInMilliseconds

@@ -4,9 +4,6 @@ import Foundation
 //: To load the subtitle file:
 //: change `"some subtitle.srt"` to the path to your subtitle file
 let oldFile = try String(contentsOfFile: "some subtitle.srt")
-
-let linebreak = "\r\n"
-let emptyLine = linebreak + linebreak
 let titles = oldFile.components(separatedBy: emptyLine)
 //: Search the last spoken fragment in the movie and write down the timecode. Store this timecode in `adjustedTimecode`.
 let adjustedTimecode = Timecode(hour: 0, minute: 46, second: 5, millisecond: 300)
