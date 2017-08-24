@@ -5,7 +5,8 @@ let oldFile = try String(contentsOfFile: "some subtitle.srt")
 
 let chunks = oldFile.components(separatedBy: "\r\n\r\n")
 
-let factor = Timecode(hour: 0, minute: 46, second: 5, millisecond: 300) / Timecode(hour: 0, minute: 44, second: 10, millisecond: 800)
+let lastTitle = chunks.last!.components(separatedBy: "\r\n")[1].timecode(at:0)
+let factor = Timecode(hour: 0, minute: 46, second: 5, millisecond: 300) / lastTitle
 
 let strechedChunks = chunks.map { chunk -> String in
 	var line = chunk.components(separatedBy: "\r\n")
